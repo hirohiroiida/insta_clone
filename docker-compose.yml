@@ -2,7 +2,7 @@ version: "3.9"
 services:
   web:
     build: .
-    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3001 -b '0.0.0.0'"
     volumes:
       - .:/insta_clone:cached
       - bundle:/usr/local/bundle
@@ -10,8 +10,11 @@ services:
       - 3001:3000
     depends_on:
       - db
+      - chrome
     stdin_open: true
     tty: true
+    environment:
+      SELENIUM_DRIVER_URL: http://chrome:4444/wd/hub
   db:
     image: mysql:5.7.33
     environment:
@@ -20,8 +23,10 @@ services:
       - 3307:3306
     volumes:
       - mysql_data:/var/lib/mysql
-
+  chrome:
+    image: selenium/standalone-chrome-debug:latest
+    ports:
+      - 4444:4444
 volumes:
   bundle:
   mysql_data:
-
