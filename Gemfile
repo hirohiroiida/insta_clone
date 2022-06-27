@@ -47,6 +47,9 @@ gem 'bootsnap', require: false
 # 認証
 gem 'sorcery'
 
+# 国際化
+gem 'rails-i18n'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
