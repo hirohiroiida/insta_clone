@@ -55,6 +55,7 @@ gem 'activestorage-validator'
 
 # binding.pry
 gem 'pry-rails'
+gem 'pry-nav'
 
 # ページネーション
 gem 'pagy'
