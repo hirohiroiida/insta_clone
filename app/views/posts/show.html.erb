@@ -22,7 +22,6 @@
             <% if logged_in? %>
               <%= render 'posts/likes/likes', post: @post %>
             <% end %>
-            
             <!-- Menu -->
             <% if current_user && current_user.owner?(@post) %>
               <div class="dropdown text-center">
