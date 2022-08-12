@@ -1,4 +1,4 @@
-class User::RelationshipsController < ApplicationController
+class Users::RelationshipsController < ApplicationController
   before_action :require_login
 
   def create
