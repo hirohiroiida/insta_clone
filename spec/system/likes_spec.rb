@@ -13,14 +13,14 @@ RSpec.describe 'いいね', type: :system do
         within "#like_post_#{post.id}" do
           find('.btn-like').click
         end
-        sleep 0.1
+        sleep 0.2
       }.to change { Like.count }.by(1)
 
       expect {
         within "#like_post_#{post.id}" do
           find('.btn-unlike').click
         end
-        sleep 0.1
+        sleep 0.2
       }.to change { Like.count }.by(-1)
     end
   end
