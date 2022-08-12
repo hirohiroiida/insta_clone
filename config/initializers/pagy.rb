@@ -1,3 +1,3 @@
-Pagy::DEFAULT[:items] = 15
+Pagy::DEFAULT[:items] = 3
 require 'pagy/extras/bootstrap'
 require 'pagy/extras/i18n'
