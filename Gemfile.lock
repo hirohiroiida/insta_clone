@@ -125,6 +125,8 @@ GEM
       faraday-net_http (~> 2.0)
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (2.0.3)
+    gimei (1.1.0)
+      romaji
     globalid (1.0.0)
       activesupport (>= 5.0)
     html_tokenizer (0.0.7)
@@ -239,6 +241,8 @@ GEM
     reline (0.3.1)
       io-console (~> 0.5)
     rexml (3.2.5)
+    romaji (0.2.4)
+      rake (>= 0.8.0)
     rspec-core (3.11.0)
       rspec-support (~> 3.11.0)
     rspec-expectations (3.11.0)
@@ -331,6 +335,7 @@ DEPENDENCIES
   erb_lint
   factory_bot_rails
   faker
+  gimei
   importmap-rails
   jbuilder
   mysql2 (~> 0.5)
