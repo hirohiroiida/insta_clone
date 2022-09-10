@@ -24,3 +24,4 @@ class Post < ApplicationRecord
   validates :images, presence: true,
                      blob: { content_type: ['image/png', 'image/jpg', 'image/jpeg'], size_range: 1..(5.megabytes) }
 end
+
