@@ -44,6 +44,8 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
 
+gem 'image_processing', '~> 1.2'
+
 # 認証
 gem 'sorcery'
 
@@ -62,6 +64,9 @@ gem 'pagy'
 
 # 検索
 gem 'ransack'
+
+# デコレータ
+gem 'draper'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
