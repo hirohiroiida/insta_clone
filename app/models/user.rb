@@ -51,6 +51,8 @@ class User < ApplicationRecord
   # いいね機能
   def like(post)
     like_posts << post
+  rescue ActiveRecord::RecordInvalid
+    false
   end
 
   def unlike(post)
@@ -64,6 +66,8 @@ class User < ApplicationRecord
   # フォロー機能
   def follow(other_user)
     following << other_user
+  rescue ActiveRecord::RecordInvalid
+    false
   end
 
   def unfollow(other_user)
