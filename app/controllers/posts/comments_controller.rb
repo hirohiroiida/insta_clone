@@ -3,9 +3,7 @@ class Posts::CommentsController < ApplicationController
 
   def create
     @comment = current_user.comments.build(comment_params)
-    if @comment.save
-      create_notifications_about_comment_to_own_post(@comment)
-    end
+    create_notifications_about_comment_to_own_post(@comment) if @comment.save
   end
 
   def edit
