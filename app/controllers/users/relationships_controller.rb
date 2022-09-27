@@ -3,8 +3,10 @@ class Users::RelationshipsController < ApplicationController
 
   def create
     @user = User.find(params[:user_id])
-    current_user.follow(@user)
-    create_notifications_about_follow(@user)
+    if current_user.follow(@user)
+      create_notifications_about_follow(@user)
+      UserMailer.with(user_from: current_user, user_to: @user).follow.deliver_later
+    end
   end
 
   def destroy
