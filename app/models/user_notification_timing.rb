@@ -10,6 +10,7 @@
 #
 # Indexes
 #
+#  idx_user_n_timings_on_user_id_and_n_timing_id              (user_id,notification_timing_id) UNIQUE
 #  index_user_notification_timings_on_notification_timing_id  (notification_timing_id)
 #  index_user_notification_timings_on_user_id                 (user_id)
 #

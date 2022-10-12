@@ -97,6 +97,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_04_182354) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["notification_timing_id"], name: "index_user_notification_timings_on_notification_timing_id"
+    t.index ["user_id", "notification_timing_id"], name: "idx_user_n_timings_on_user_id_and_n_timing_id", unique: true
     t.index ["user_id"], name: "index_user_notification_timings_on_user_id"
   end
 

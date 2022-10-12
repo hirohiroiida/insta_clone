@@ -6,5 +6,6 @@ class CreateUserNotificationTimings < ActiveRecord::Migration[7.0]
 
       t.timestamps
     end
+    add_index :user_notification_timings, [:user_id, :notification_timing_id], unique: true, name: 'idx_user_n_timings_on_user_id_and_n_timing_id'
   end
 end

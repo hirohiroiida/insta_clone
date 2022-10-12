@@ -91,4 +91,3 @@ class User < ApplicationRecord
     # user_notification_timings.joins(:notification_timing).find_by(notification_timing: { timing_type: type }).present?
   end
 end
-
