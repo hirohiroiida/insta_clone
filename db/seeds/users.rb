@@ -1,5 +1,5 @@
 puts 'Start inserting seed "users" ...'
-7.times do
+500.times do
   user = User.create(
     email: Faker::Internet.unique.email,
     username: Gimei.kanji,
